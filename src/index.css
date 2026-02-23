@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 30% 7%;
+    --foreground: 210 20% 92%;
+
+    --card: 220 28% 10%;
+    --card-foreground: 210 20% 92%;
+
+    --popover: 220 28% 10%;
+    --popover-foreground: 210 20% 92%;
+
+    --primary: 38 65% 55%;
+    --primary-foreground: 220 30% 7%;
+
+    --secondary: 220 20% 16%;
+    --secondary-foreground: 210 20% 85%;
+
+    --muted: 220 20% 14%;
+    --muted-foreground: 215 15% 55%;
+
+    --accent: 220 25% 18%;
+    --accent-foreground: 210 20% 92%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 20% 18%;
+    --input: 220 20% 18%;
+    --ring: 38 65% 55%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 220 28% 10%;
+    --sidebar-foreground: 210 20% 85%;
+    --sidebar-primary: 38 65% 55%;
+    --sidebar-primary-foreground: 220 30% 7%;
+    --sidebar-accent: 220 25% 18%;
+    --sidebar-accent-foreground: 210 20% 92%;
+    --sidebar-border: 220 20% 18%;
+    --sidebar-ring: 38 65% 55%;
+
+    /* Custom tokens */
+    --surface-elevated: 220 26% 12%;
+    --metric-glow: 38 65% 55%;
+    --text-dim: 215 15% 45%;
+    --divider: 220 20% 15%;
+  }
+
+  .dark {
+    /* Already dark by default */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .font-sans {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  .font-display {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+  .text-dim {
+    color: hsl(var(--text-dim));
+  }
+  .bg-elevated {
+    background-color: hsl(var(--surface-elevated));
+  }
+  .border-divider {
+    border-color: hsl(var(--divider));
+  }
+  .text-metric {
+    color: hsl(var(--metric-glow));
+  }
+}
